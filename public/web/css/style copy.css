@@ -1,0 +1,162 @@
+/* Sign In Container */
+#signInContainer {
+    position: relative;
+    max-width: 1728px; /* Limit maximum width */
+    width: 100%; /* Make width responsive */
+    height: auto; /* Adjust height dynamically */
+    background: #F8FAEF;
+ /* Add padding for smaller screens */
+    box-sizing: border-box; /* Include padding in width calculation */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sign In Text */
+#signInText {
+    position: absolute;
+    width: 293px;
+    height: 88px;
+    left: 717px;
+    top: 311px;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 88px;
+    color: #40513B;
+    display: flex;
+    align-items: center;
+}
+
+/* Form Container */
+#formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 54px;
+    position: absolute;
+    width: 1237px;
+    height: 364px;
+    left: calc(50% - 1237px/2 - 0.5px);
+    top: 443px;
+}
+
+#formContainer form {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Adjust as necessary */
+}
+
+/* Input Labels (Email, Password) */
+.inputLabel {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 44px;
+    color: #40513B;
+    display: flex;
+    align-items: center;
+}
+
+/* Input Fields */
+.inputContainer input {
+    font-size: 1.5em;
+    box-sizing: border-box;
+    width: 1237px;
+    height: 60px;
+    background: #F8FAEF;
+    border: 1px solid #40513B;
+    border-radius: 18px;
+}
+
+#formContainer form .inputContainer input {
+    /* Your styles here */
+}
+
+/* Button Container */
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 19px;
+    width: 648px;
+    height: 60px;
+}
+
+/* Sign In Button */
+#signInButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 30px;
+    gap: 10px;
+    width: 314.5px;
+    height: 60px;
+    background: #40513B;
+    color: #F8FAEF;
+    border-radius: 18px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 35px;
+    line-height: 44px;
+}
+
+/* New Account Button */
+#newAccountButton {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 30px;
+    gap: 10px;
+    width: 314.5px;
+    height: 60px;
+    border: 2px solid #40513B;
+    border-radius: 18px;
+    font-family: 'Lexend', sans-serif;
+    font-size: 35px;
+    line-height: 44px;
+    color: #40513B; /* Assuming you want the text color to be #40513B */
+}
+@media (max-width: 768px) {
+    #signInContainer, #formContainer, .inputContainer input {
+        /* Centering content without changing the original widths */
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative; /* Adjust if necessary for your design */
+    }
+
+    #signInText, .inputLabel, #signInButton, #newAccountButton {
+        /* Minor font size adjustments for readability */
+        font-size: calc(16px + 2vw);
+    }
+
+    .buttonContainer {
+        /* Keep as row but ensure it doesn't overflow the viewport */
+        flex-wrap: wrap;
+        justify-content: center; /* Center buttons if they wrap */
+    }
+}
+
+@media (max-width: 480px) {
+    #signInContainer {
+        /* Further reduce padding for very small screens */
+        padding: 5px;
+    }
+
+    #signInText, .inputLabel, #signInButton, #newAccountButton {
+        /* Slightly smaller font sizes for very small screens */
+        font-size: calc(14px + 2vw);
+    }
+
+    .buttonContainer {
+        /* Ensure buttons are stacked vertically on very small screens */
+        flex-direction: column;
+        gap: 10px;
+    }
+}
