@@ -5,113 +5,49 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>e-commerce - @yield('title')</title>
+    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/navbar.css')}}" />
+    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/footer.css')}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>SkillsHub - @yield('title')</title>
-
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/bootstrap.min.css')}}" />
-
-    <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="{{ asset('web/css/font-awesome.min.css')}}">
-
-    <!-- Custom stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/style.css')}}">
     @yield ('styles')
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-		    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
 
 </head>
 
 <body>
 
     <!-- Header -->
-    <header id="header">
-        <div class="container">
-
-            <div class="navbar-header">
-                <!-- Logo -->
-                <div class="navbar-brand">
-                    <a class="logo" href="index.html">
-                        <img src="{{asset('web/img/logo.png')}}" alt="logo">
-                    </a>
-                </div>
-                <!-- /Logo -->
-
-                <!-- Mobile toggle -->
-                <button class="navbar-toggle">
-                    <span></span>
-                </button>
-                <!-- /Mobile toggle -->
-            </div>
-
-            <!-- Navigation -->
-                <x-navbar></x-navbar>
-            <!-- /Navigation -->
-
-        </div>
-    </header>
+    <header>
+            <ul>
+                <li><a class="task" href="#">Home</a></li>
+                <li><a class="task" href="#">Cart</a></li>
+                <li><a class="task" href="#">Profile</a></li>
+                <li><a class="task" href="#">Sign in</a></li>
+                <li><a class="task" href="#">Sign up</a></li>
+                <li><a class="task" href="#">Sign out</a></li>
+            </ul>
+        </header>
     <!-- /Header -->
 
 
     @yield('content')
 
     <!-- Footer -->
-    <footer id="footer" class="section">
 
-        <!-- container -->
-        <div class="container">
-
-            <!-- row -->
-            <div id="bottom-footer" class="row">
-
-                <!-- social -->
-                <div class="col-md-4 col-md-push-8">
-                    <x-social-links></x-social-links>
-                </div>
-                <!-- /social -->
-
-                <!-- copyright -->
-                <div class="col-md-8 col-md-pull-4">
-                    <div class="footer-copyright">
-                        <span>&copy; Copyright 2021. All Rights Reserved. | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">SkillsHub</a></span>
-                    </div>
-                </div>
-                <!-- /copyright -->
+<div class="container">
+    <b>Skin care</b>
+        <div class="text1">
+            <h3 class="con">Contact Us </h3>
+            <div class="text2">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-solid fa-g"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
 
             </div>
-            <!-- row -->
-
         </div>
-        <!-- /container -->
 
-    </footer>
     <!-- /Footer -->
-
-    <!-- preloader -->
-    <div id='preloader'>
-        <div class='preloader'></div>
-    </div>
-    <!-- /preloader -->
-
-
-    <!-- jQuery Plugins -->
-    <script type="text/javascript" src="{{ asset('web/js/jquery.min.js')}}"></script>
-    <script type="text/javascript" src="{{ asset('web/js/bootstrap.min.js')}}"></script>
-    <script type="text/javascript" src="{{ asset('web/js/main.js')}}"></script>
-    <script>
-        $('#logout-link').click(function(e){
-            e.preventDefault();
-            $('#logout-form').submit();
-        });
-    </script>
     @yield('scripts')
 </body>
 

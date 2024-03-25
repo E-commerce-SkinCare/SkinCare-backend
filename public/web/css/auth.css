@@ -1,0 +1,60 @@
+body{
+    background: #F8FAEF;
+}
+
+form {
+margin: 170px;
+padding: 0;
+display: flex;
+flex-wrap: wrap;
+
+}
+h1{
+    width: 1070px;
+    height: 88px;
+    font-size: 70px;
+    line-height: 88px;
+    color: #40513B;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+
+}
+input[type="email"],[type="password"],[type="name"]{
+    font-size: 1.5em;
+    box-sizing: border-box;
+    width: 1237px;
+    height: 55px;
+    background: #F8FAEF;
+    border: 1px solid #40513B;
+    border-radius: 18px;
+}
+form #signInButton{
+    box-sizing: border-box;
+    width:250px;
+    height: 50px;
+    background: #40513B;
+    color: #F8FAEF;
+    border-radius: 18px;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: 'Lexend', sans-serif;
+    text-align: center;
+
+}
+form #newAccountButton{
+    box-sizing: border-box;
+    width: 250px;
+    height: 50px;
+    border: 2px solid #40513B;
+    border-radius: 18px;
+    font-size: 30px;
+    line-height: 25px;
+    font-family: 'Lexend', sans-serif;
+    color: #40513B;
+    margin: 10px;
+}
+
+form #button{
+    display: block;
+    margin: 30px auto;
+}
