@@ -1,105 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <title>SkillsHub - @yield('title')</title>
-
-    <!-- Google font -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/bootstrap.min.css')}}" />
-
-    <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="{{ asset('web/css/font-awesome.min.css')}}">
-
-    <!-- Custom stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/style.css')}}">
-    @yield ('styles')
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-		    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skin care| @yield('title')</title>
+    <link type="text/css" rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/home .css')}}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/index.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/home1.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/style copy.css')}}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/style copy.css')}}">
+    @yield('styles')
 
 </head>
-
 <body>
+    <header>
+        <form id="logout-form" method="POST" action="{{url('logout')}}" style="display: none;">
+                        @csrf
+        </form>
+        <ul>
+            <li><a class="task" href="#">Home</a></li>
+            <li><a class="task" href="#">Cart</a></li>
 
-    <!-- Header -->
-    <header id="header">
-        <div class="container">
+            @guest
+                <li><a class="task" href="{{url('login')}}">Sign in</a></li>
+                <li><a class="task" href="{{url('register')}}">Sign up</a></li>
+            @endguest
+            @auth
+                <li><a class="task" href="#">Profile</a></li>
+                <li><a id="logout-link" class="task" href="#">Sign out</a></li>
 
-            <div class="navbar-header">
-                <!-- Logo -->
-                <div class="navbar-brand">
-                    <a class="logo" href="index.html">
-                        <img src="{{asset('web/img/logo.png')}}" alt="logo">
-                    </a>
-                </div>
-                <!-- /Logo -->
+            @endauth
 
-                <!-- Mobile toggle -->
-                <button class="navbar-toggle">
-                    <span></span>
-                </button>
-                <!-- /Mobile toggle -->
-            </div>
+        </ul>
 
-            <!-- Navigation -->
-                <x-navbar></x-navbar>
-            <!-- /Navigation -->
-
-        </div>
     </header>
-    <!-- /Header -->
-
-
     @yield('content')
 
     <!-- Footer -->
-    <footer id="footer" class="section">
+<footer>
+    <div class="container">
+    <b>Skin care</b>
 
-        <!-- container -->
-        <div class="container">
+        <div class="text1">
+            <h3 class="con">Contact Us </h3>
+            <div class="text2">
 
-            <!-- row -->
-            <div id="bottom-footer" class="row">
-
-                <!-- social -->
-                <div class="col-md-4 col-md-push-8">
-                    <x-social-links></x-social-links>
-                </div>
-                <!-- /social -->
-
-                <!-- copyright -->
-                <div class="col-md-8 col-md-pull-4">
-                    <div class="footer-copyright">
-                        <span>&copy; Copyright 2021. All Rights Reserved. | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#">SkillsHub</a></span>
-                    </div>
-                </div>
-                <!-- /copyright -->
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-solid fa-g"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
 
             </div>
-            <!-- row -->
 
         </div>
-        <!-- /container -->
+</footer>
 
-    </footer>
-    <!-- /Footer -->
-
-    <!-- preloader -->
-    <div id='preloader'>
-        <div class='preloader'></div>
-    </div>
-    <!-- /preloader -->
 
 
     <!-- jQuery Plugins -->

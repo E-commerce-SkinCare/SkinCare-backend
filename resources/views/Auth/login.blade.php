@@ -1,11 +1,11 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="{{ asset('web/css/style copy.css')}}">
-    </head>
-    <body>
+@extends('web.layout')
+
+
+@section('title')
+    Login page
+@endsection
+
+@section('content')
         <div id="signInContainer">
             <div id="signInText">Sign In</div>
             <div id="formContainer">
@@ -20,12 +20,10 @@
                         <input id="password" type="password" name="password" placeholder="Password">
                     </div>
                     <div class="buttonContainer">
-                        <input type="checkbox" name="remember" id="" >Remember Me
                         <button id="signInButton" type="submit">Sign In</button>
                         <button id="newAccountButton" name ="newAccount">New Account</button>
                     </div>
                 </form>
             </div>
         </div>
-    </body>
-    </html>
+@endsection

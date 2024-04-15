@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('web.layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="{{ asset('web/css/style copy.css')}}">
-</head>
 
-<body>
+@section('title')
+    Register page
+@endsection
 
+@section('content')
     <div id="signInContainer">
         <div id="signInText">Register</div>
 
@@ -42,7 +39,5 @@
         </div>
     </div>
 
-</body>
-
-</html>
+@endsection
 
