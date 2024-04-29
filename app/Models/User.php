@@ -21,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'address',
+        'phone_number'
     ];
 
     /**
@@ -42,4 +44,18 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // Define the relationship with Order
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    // Define the relationship with ProductRating
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'product_ratings', 'user_id', 'product_id')
+            ->withPivot('rating')
+            ->withTimestamps();
+    }
 }

@@ -1,29 +1,19 @@
 @extends('web.layout')
-
-
 @section('title')
-    Login page
+sign in
 @endsection
-
+@section('styles')
+<link type="text/css" rel="stylesheet" href="{{ asset('web/css/auth.css')}}">
+@endsection
 @section('content')
-        <div id="signInContainer">
-            <div id="signInText">Sign In</div>
-            <div id="formContainer">
-                <form method="POST" action="{{url('login')}}">
-                    @csrf
-                    <div class="inputContainer">
-                        <label for="email" class="inputLabel">Email</label>
-                        <input id="email" type="email" name="email" placeholder="Email">
-                    </div>
-                    <div class="inputContainer">
-                        <label for="password" class="inputLabel">Password</label>
-                        <input id="password" type="password" name="password" placeholder="Password">
-                    </div>
-                    <div class="buttonContainer">
-                        <button id="signInButton" type="submit">Sign In</button>
-                        <button id="newAccountButton" name ="newAccount">New Account</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+<form method="POST" action="{{url('login')}}" class="aa">
+    @csrf
+    <h1><b>Sign In</b></h1>
+    <input id="email" type="email" name="email" placeholder="  email"><br>
+    <input id="password" type="password" name="password" placeholder="  password"><br>
+    <div id="button">
+        <button id="signInButton" type="submit">Sign in</button>
+        <button id="newAccountButton" name="newAccount">New Account</button>
+    </div>
+</form>
 @endsection
