@@ -2,23 +2,24 @@
 
 namespace App\Http\Controllers\Web;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
 {
-    // public function show($id)
-    // {
-    //     $data['product'] = Product::findOrFail($id); // Find the product or fail
-    //     $user = Auth::user(); // Get the authenticated user
-    //     if ($user!==null){ // Check if user is not null
-    //         $pivotRow=$user->products()->where('product_id',$id)->active()->first(); // Get the user's product pivot row
-    //         if ($pivotRow !== null and $pivotRow->pivot->status =='closed'){ // Check if the product status is closed
-    //             $data['canEnterproduct']=false; // Set canEnterproduct to false if product is closed
-    //         }
-    //     }
+    public function show($id)
+    {
+        $data['product'] = Product::findOrFail($id); // Find the product or fail
+        return view('web.products.show')->with($data); // Return the product view with data
+    }
+public function addToCart($id)
+{
+    $cart = Session::get('cart', []); // Get current cart from session or initialize as empty array
+    $cart[] = $id; // Add the product ID to the cart array
+    Session::put('cart', $cart); // Store the updated cart back in the session
 
-    //     return view('web.products.show')->with($data); // Return the product view with data
-    // }
+    return redirect(url('/cart')); // Redirect to the cart page
+}
 }

@@ -1,0 +1,92 @@
+.info {
+    padding: 70px 170px;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    height: 350px;
+
+
+}
+
+.info .box {
+    width: 1200px;
+    position: relative;
+    height: 110px;
+}
+.info .box .number{
+    width: 100%;
+    height: 50px;
+    border: 1px #40513B solid;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 20px;
+    margin: auto auto;
+    padding-left: 10px;
+}
+.info .box .date{
+    position:absolute;
+    width: 600px;
+    height: 52px;
+    border: 1px #40513B solid;
+    border-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 20px;
+    margin: auto auto;
+    left: 600px;
+    padding-left: 10px;
+}
+.info .box  .tel{
+    position:absolute;
+    width: 597px;
+    height: 52px;
+    border: 1px #40513B solid;
+    border-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    font-size: 20px;
+    margin: auto auto;
+    left: 0;
+    padding-left: 10px;
+}
+.info .box2{
+    width: 1200px;
+}
+.info .box2 input{
+    width: 100%;
+    height: 50px;
+    border: 1px #40513B solid;
+    border-radius: 15px;
+    font-size: 20px;
+    margin: auto auto;
+    margin-top: 20px;
+    padding-left: 10px;
+}
+.h1 {
+    color: #40513B;
+    margin: 50px;
+    font-weight: 600;
+    font-size: 60px;
+
+}
+
+
+button {
+    padding: 10px 80px;
+    width: auto;
+    height: 50px;
+    font-size: 25px;
+    border: 2px solid #40513B;
+    border-radius: 18px;
+    align-items: center;
+    text-align: center;
+    background-color: #40513B;
+    color: white;
+    margin: auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+button:hover {
+    color: #40513B;
+    background-color: white;
+}

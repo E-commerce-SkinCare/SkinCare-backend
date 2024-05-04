@@ -1,7 +1,11 @@
 <?php
 
-use App\Http\Controllers\Web\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Web\CartController;
+use App\Http\Controllers\Web\HomeController;
+use App\Http\Controllers\Web\PaymentController;
+use App\Http\Controllers\Web\ProductController;
+use App\Http\Controllers\Web\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +20,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,'index']);
 
+//product
+Route::get('/show/product/{id}',[ProductController::class,'show']);
+
+//cart
+// Route::post('/cart/add/{id}',[ProductController::class,'addToCart']);
+// Route::get('/cart', [CartController::class, 'show']);
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+
+// Route to process purchase (dummy action for demonstration)
+Route::post('/cart/purchase', [CartController::class, 'purchase'])->name('cart.purchase');
+//payment
+Route::get('/cash',[PaymentController::class,'index']);
+Route::get('/visa',[PaymentController::class,'visa']);
+
+//profile
+Route::get('/profile',[ProfileController::class,'index']);
+Route::get('/delete-account/{user}',[ProfileController::class,'deleteAccount']);

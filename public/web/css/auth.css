@@ -27,6 +27,7 @@ input[type="email"],[type="password"],[type="name"]{
     background: #F8FAEF;
     border: 1px solid #40513B;
     border-radius: 18px;
+    padding-left: 10px;
 }
 form #signInButton{
     box-sizing: border-box;

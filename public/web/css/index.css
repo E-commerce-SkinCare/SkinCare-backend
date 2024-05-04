@@ -1,5 +1,6 @@
 body{
     margin: auto;
+    background-color: #f8faef;
 }
 .di {
     color:#CBB04F;
@@ -11,10 +12,9 @@ body{
     margin-top: -8px;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 10px solid #82a178;
-    border-right: 10px solid #82a178;
-    border-left: 10px solid #82a178;
-    border-radius: 13px;
+    border-bottom: 10px solid rgba(203, 176, 79, 0.38);
+    border-right: 10px solid rgba(203, 176, 79, 0.38);
+    border-left: 10px solid rgba(203, 176, 79, 0.38);
 }
 .h{
 
@@ -22,7 +22,7 @@ body{
     font-family:cursive;
     font-size: 25px;
     margin-top: -395px;
-    margin-left: 30px;
+    margin-left: 150px;
     display: flex;
     flex-wrap: wrap;
     width: auto;
@@ -36,10 +36,11 @@ body{
 .p{
 
     font-family:'Times New Roman', Times, serif;
-    font-size: 29px;
+    font-style: dis;
+    font-size: 40px;
     line-height: 30px;
     margin-top: -70px;
-    margin-left:35px;
+    margin-left:150px;
     display: flex;
     flex-wrap: wrap;
     color:#CBB04F;
@@ -50,7 +51,8 @@ body{
     width: auto;
     margin:auto ;
     align-items: end;
-    margin-right: 0px;
+    margin-right: 19px;
+
 }
 
 .c{
@@ -81,13 +83,22 @@ body{
     height: 250px;
     border-radius: 50px;
     display:inline-flex;
-    /* padding: 2%; */
     margin-left: 40px;
     margin-right: 20px;
     border: 5px solid #82a178;
-
-
-
+}
+div[class="me"],
+[class="me1"],
+[class="me2"],
+[class="me3"],
+[class="me4"],
+[class="me5"]{
+    margin-left: 60px;
+    font-size: 20px;
+    font-family: cursive, sans-serif;
+}
+.fa-solid{
+    margin-left: 160px;
 }
 .photo2{
     width: 250px;
@@ -162,4 +173,21 @@ body{
     margin-left: 40px;
     margin-right: 20px;
     border: 5px solid #82a178;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Lexend',sans-serif;
+
+}
+#cart{
+    border: none;
+    color: #40513B;
+}
+.productName{
+    text-decoration: none;
+    color:black;
 }

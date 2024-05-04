@@ -7,7 +7,7 @@
     background: linear-gradient(180deg, rgba(248, 250, 239, 0.44) 0%, rgba(172, 202, 171, 0.44) 40.66%, rgba(96, 153, 102, 0.44) 100%);
     display: flex;
     justify-content: space-between;
-    height: 190px;
+    height: 140px;
     font-family: system-ui;
 
 }
@@ -17,7 +17,7 @@
     font-size: 60px;
     padding: 40px 0 0 90px;
 }
-.container .text1 .con{
+.container .contact .con{
     color: #40513B;
     font-size: 30px;
     padding: 0 0 0 10px;
@@ -25,14 +25,14 @@
 
 }
 
-.container .text1{
+.container .contact{
     padding: 10px 80px 0 20px;
 }
-.container .text1 .text2 a{
+.container .contact .contact2 .contactIcon{
     color: #40513B;
     padding: 5px 8px 0 10px;
     font-size: 50px;
 }
-.container .text1 .text2 a i{
+.container .contact .contact2 .contactIcon i{
     size: 60px;
 }

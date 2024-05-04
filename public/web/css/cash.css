@@ -1,0 +1,47 @@
+.info{
+    padding: 70px 170px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    width:auto ;
+    height: auto;
+    gap: 22px;
+}
+
+input[type="text"]{
+    align-items: center;
+    width: 100%;
+    font-size: 20px;
+    height: 50.33px;
+    margin: auto auto;
+    border: 1px #40513B solid ;
+    border-radius: 14px;
+    display: flex;
+    padding-left: 10px;
+}
+.h1{
+    color: #40513B;
+    margin: 60px;
+    font-size: 50px;
+}
+button{
+    padding: 5px 30px;
+    width: 170px;
+    height: 45px;
+    border: 2px solid #40513B;
+    border-radius: 10px;
+    background-color: #40513B;
+    color: white;
+    margin :auto auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+
+}
+button:hover{
+    color:#40513B;
+    background-color: white;
+}

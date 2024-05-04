@@ -5,6 +5,8 @@ namespace App\Http\Controllers\api;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\UserResource;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -13,7 +15,7 @@ class AuthController extends Controller
     public function register(Request $request){
         $validator = Validator::make($request->all(),[ // Validate the request
             'name'=>'required|string|max:255',
-            'email'=>'required|email|max:255',
+            'email'=>'required|email|max:255|unique:users,email',
             'password'=>'required|string|max:25|confirmed',
         ]);
         if ($validator->fails()){
@@ -25,7 +27,12 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
         $token = $user->createToken('auth-token');
-        return ['token'=>$token->plainTextToken];
+        $userData = new UserResource($user); // Corrected to use UserResource for a single user
+
+        return response()->json([
+            'token' => $token->plainTextToken,
+            'user' => $userData
+        ]);
     }
 
     public function logout(Request $request)
@@ -48,8 +55,12 @@ class AuthController extends Controller
         }
         $user = User::where('email', $request->email)->first();
         if ($user && Hash::check($request->password, $user->password)) {
-            $token = $user->createToken('auth-token')->plainTextToken;
-            return response()->json(['access_token' => $token], 201);
+            $token = $user->createToken('auth-token')->plainTextToken; // Correctly assign plainTextToken to variable
+            $userData = new UserResource($user);
+            return response()->json([
+                'token' => $token,
+                'user' => $userData
+            ]);
         } else {
             return response()->json(['msg' => 'Invalid credentials'], 401);
         }

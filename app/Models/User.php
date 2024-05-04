@@ -58,4 +58,8 @@ class User extends Authenticatable
             ->withPivot('rating')
             ->withTimestamps();
     }
+    public function carts()
+    {
+        return $this->hasMany(Cart::class);
+    }
 }

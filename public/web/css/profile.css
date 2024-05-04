@@ -1,0 +1,124 @@
+.carry{
+    width: 1530px;
+    height: 600px;
+    background-color:  #F8FAEF;
+    position: relative;
+}
+.carry .sen{
+    position: absolute;
+    width: 553px;
+    height: 88px;
+    left: 41px;
+    top: 40px;
+    font-family: 'system-ui';
+    font-style: normal;
+    font-weight: 650;
+    font-size: 65px;
+    line-height: 70px;
+    color: #40513B;
+}
+.carry .content1{
+    position: absolute;
+    top: 140px;
+    left: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.carry .content1 .name{
+    width: 1290px;
+    height: 45px;
+    background: rgba(157, 192, 139, 0.3);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Lexend', sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 44px;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+.carry .content1 .email{
+    width: 1290px;
+    height: 45px;
+    background: rgba(157, 192, 139, 0.3);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Lexend', sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 44px;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+}
+.carry h3{
+    position: absolute;
+    top: 330px;
+    left: 90px;
+    font-size: 30px;
+    font-family: 'system-ui' ;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44px;
+    color:#40513B;
+}
+.carry .content2{
+    position: absolute;
+    top: 380px;
+    left: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.carry .content2 div{
+    width: 1300px;
+    height: 45px;
+    background: rgba(157, 192, 139, 0.3);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Lexend', sans-serif ;
+    padding-top: 6px;
+    padding-left: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+    outline: none;
+
+}
+
+.carry .content3{
+    position: absolute;
+    top:450px ;
+    left: 90px;
+}
+.carry .content3 div{
+    width: 1300px;
+    height: 45px;
+    background: rgba(157, 192, 139, 0.3);
+    border-radius: 10px;
+    border: none;
+    font-family: 'Lexend', sans-serif ;
+    padding-top: 6px;
+    padding-left: 10px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 44px;
+    outline: none;
+}
+
+
+
+
+.delete-user-btn{
+    text-decoration: none;
+    color: black;
+}
