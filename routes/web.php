@@ -19,19 +19,18 @@ use App\Http\Controllers\Web\ProfileController;
 */
 
 Route::get('/',[HomeController::class,'index']);
-
 //product
 Route::get('/show/product/{id}',[ProductController::class,'show']);
 
 //cart
-// Route::post('/cart/add/{id}',[ProductController::class,'addToCart']);
-// Route::get('/cart', [CartController::class, 'show']);
-Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart/add/{id}',[ProductController::class,'addToCart']);
+Route::get('/cart', [CartController::class, 'show']);
+// Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 
 // Route to process purchase (dummy action for demonstration)
-Route::post('/cart/purchase', [CartController::class, 'purchase'])->name('cart.purchase');
+//Route::post('/cart/purchase', [CartController::class, 'purchase'])->name('cart.purchase');
 //payment
-Route::get('/cash',[PaymentController::class,'index']);
+Route::get('/cash',[PaymentController::class,'cash']);
 Route::get('/visa',[PaymentController::class,'visa']);
 
 //profile

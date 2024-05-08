@@ -2,14 +2,53 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Models\Cart;
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Session;
-use App\Models\Order;
+use App\Http\Resources\CartResource;
+
 class CartController extends Controller
 {
+    public function store(Request $request)
+    {
+
+        $userId = $request->input('user_id');
+        $productId = $request->input('product_id');
+        $quantity = $request->input('quantity', 1); // Default quantity is 1 if not specified
+
+        // Validate that the product exists
+        $product = Product::find($productId);
+        if (!$product) {
+            return response()->json(['error' => 'Product not found'], 404);
+        }
+
+        // Check if the product is already in the cart
+        $cartItem = Cart::where('user_id', $userId)->where('product_id', $productId)->first();
+
+        if ($cartItem) {
+            // If item exists, update the quantity
+            $cartItem->quantity += $quantity;
+            $cartItem->save();
+        } else {
+            // If item does not exist, create a new cart item
+            Cart::create([
+                'user_id' => $userId,
+                'product_id' => $productId,
+                'quantity' => $quantity
+            ]);
+        }
+
+        return response()->json(['message' => 'Product added to cart']);
+    }
+
+    public function show(){
+        // Retrieving all products from the database
+        $cartItems=Cart::get();
+        // Returning products as a collection of productResource
+        return CartResource::collection($cartItems);
+    }
+}
 //     public function index()
 //     {
 //         $cart = Session::get('cart', []);
@@ -82,4 +121,4 @@ class CartController extends Controller
 //     return response()->json(['error' => 'Product not found in cart'], 404);
 // }
 
-}
+//}

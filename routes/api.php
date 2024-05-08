@@ -3,8 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\AuthController;
-use App\Http\Controllers\Api\CartController;
-use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\api\CartController;
+use App\Http\Controllers\api\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +26,12 @@ Route::post('/login',[AuthController::class,'login']);
 
 
 Route::get('/products',[ProductController::class,'index']);
+Route::post('/cart',[CartController::class,'store']);
+Route::get('/cart/show',[CartController::class,'show']);
 
 
         //cart
-        // Route::post('/carts/{cart}', 'CartController@addProducts');
+        // Route::post('/cart', 'CartController@store');
         // Route::put('/cart/update/{orderItemId}', [CartController::class, 'updateCartItem']);
         // Route::get('/cart', [CartController::class, 'getCartItems']);
         // Route::post('/cart/place-order', [CartController::class, 'placeOrder']);
