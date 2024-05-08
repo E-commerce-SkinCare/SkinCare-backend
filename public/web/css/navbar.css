@@ -28,11 +28,11 @@ body{
     justify-content: center;
     align-items: center;
     list-style: none ;
-    padding:13px 100px 10px 100px ;
+    padding:13px 100px 10px 320px ;
 
  }
 header ul li {
-    margin:0 10px 0 10px ;
+    margin:0 20px 0 30px ;
     font-family: 'Lexend',sans-serif;
     font-size: 30px;
 

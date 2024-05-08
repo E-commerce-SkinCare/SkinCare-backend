@@ -10,11 +10,12 @@
         @csrf
         <h1>
             <b> New account</b><br>
+            @include('web.inc.message')
         </h1>
-        <input id="text" type="name" name="name" placeholder=" Name"> <br>
-        <input id="Email" type="email" name="email" placeholder=" Email"><br>
+        <input id="email" type="name" name="name" placeholder=" Name"> <br>
+        <input id="email" type="email" name="email" placeholder=" Email"><br>
         <input id="Password" type="password" name="password" placeholder=" Password"><br>
-        <input id="Confirm Password" type="password" name="password_confirmation" placeholder=" Confirm Password">
+        <input id="Password" type="password" name="password_confirmation" placeholder=" Confirm Password">
         <div id="button">
             <button  id="signInButton" type="submit" onclick="">Create Account</button></div>
         </div>

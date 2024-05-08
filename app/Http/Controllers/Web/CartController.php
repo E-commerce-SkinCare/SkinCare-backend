@@ -19,6 +19,4 @@ class CartController extends Controller
 
         return view('web.cart.show', compact('products'));
     }
-
-
 }

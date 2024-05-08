@@ -7,9 +7,11 @@
 @endsection
 
 @section('content')
-    <div class="im"></div>
-
-    <div class='imggg'><img class='imgg' src="{{ asset('uploads/products/'.$product->img) }}" alt="{{$product->product_name }}"></div>
+    <div class="class" >
+        <img class="im" src="{{ asset('uploads/products/'.$product->img) }}" alt="{{$product->product_name }}">
+    </div>
+    <div class='imggg'>
+        <img class='imgg' src="{{ asset('uploads/products/'.$product->img) }}" alt="{{$product->product_name }}"></div>
     <div class="txt">
         <h6 class="h6">{{ $product->product_name }}</h6>
         <h5 class="h5">Price: ${{ $product->price }}</h5>

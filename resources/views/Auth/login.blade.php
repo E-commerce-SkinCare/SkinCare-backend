@@ -8,7 +8,8 @@ sign in
 @section('content')
 <form method="POST" action="{{url('login')}}" class="aa">
     @csrf
-    <h1><b>Sign In</b></h1>
+    <h1><b>Sign In</b></h1><br><br>
+    @include('web.inc.message')
     <input id="email" type="email" name="email" placeholder="  email"><br>
     <input id="password" type="password" name="password" placeholder="  password"><br>
     <div id="button">

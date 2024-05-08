@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>skin care| @yield('title')</title>
+    <title>Be Glowy| @yield('title')</title>
     <!-- <link type="text/css" rel="stylesheet" href="home.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link type="text/css" rel="stylesheet" href="{{ asset('web/css/navbar.css')}}">
@@ -11,9 +11,7 @@
     <link type="text/css" rel="stylesheet" href="{{ asset('web/css/footer.css')}}">
     <!-- <link type="text/css" rel="stylesheet" href="{{ asset('web/css/style copy.css')}}"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     @yield('styles')
-
 </head>
 <body>
     <header class="navbar">

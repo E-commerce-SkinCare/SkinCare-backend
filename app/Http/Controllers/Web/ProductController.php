@@ -19,7 +19,6 @@ public function addToCart($id)
     $cart = Session::get('cart', []); // Get current cart from session or initialize as empty array
     $cart[] = $id; // Add the product ID to the cart array
     Session::put('cart', $cart); // Store the updated cart back in the session
-
     return redirect(url('/cart')); // Redirect to the cart page
 }
 }

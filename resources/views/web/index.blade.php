@@ -10,7 +10,7 @@ Home page
 <div class="di"> </div>
 <div class="h">
     <h1>skin care </h1>
-    <div class="im"> <img src="{{asset('web/img/home.png')}}" alt=""></div>
+    <div class="im"> <img src="{{asset('web/img/home.png')}}" alt="home"></div>
 </div>
 <div class="p">
     <p>
