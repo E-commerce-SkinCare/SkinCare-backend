@@ -27,13 +27,4 @@ Route::post('/login',[AuthController::class,'login']);
 
 Route::get('/products',[ProductController::class,'index']);
 Route::post('/cart',[CartController::class,'store']);
-Route::get('/cart/show',[CartController::class,'show']);
-
-
-        //cart
-        // Route::post('/cart', 'CartController@store');
-        // Route::put('/cart/update/{orderItemId}', [CartController::class, 'updateCartItem']);
-        // Route::get('/cart', [CartController::class, 'getCartItems']);
-        // Route::post('/cart/place-order', [CartController::class, 'placeOrder']);
-
-        //
+Route::get('/cart/show/{userId}',[CartController::class,'show']);

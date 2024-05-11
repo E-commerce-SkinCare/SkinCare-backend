@@ -30,6 +30,7 @@ class AuthController extends Controller
         $userData = new UserResource($user); // Corrected to use UserResource for a single user
 
         return response()->json([
+            'status' => 'success',
             'token' => $token->plainTextToken,
             'user' => $userData
         ]);
@@ -58,6 +59,7 @@ class AuthController extends Controller
             $token = $user->createToken('auth-token')->plainTextToken; // Correctly assign plainTextToken to variable
             $userData = new UserResource($user);
             return response()->json([
+                'status' => 'success',
                 'token' => $token,
                 'user' => $userData
             ]);

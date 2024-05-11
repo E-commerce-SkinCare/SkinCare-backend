@@ -42,9 +42,9 @@ class CartController extends Controller
         return response()->json(['message' => 'Product added to cart']);
     }
 
-    public function show(){
+    public function show($userId){
         // Retrieving all products from the database
-        $cartItems=Cart::get();
+        $cartItems=Cart::where('user_id', $userId)->get();
         // Returning products as a collection of productResource
         return CartResource::collection($cartItems);
     }
